@@ -1,0 +1,36 @@
+CLUTCH ZONE — ADSENSE / SECURITY SETUP
+
+WHAT THIS ZIP NOW INCLUDES
+- Public-site SEO metadata and robots directives.
+- Privacy Policy, Terms, About, Contact and Disclaimer pages.
+- Favicon + Apple touch icon.
+- Consistent legal footer links already present.
+- Admin login moved to /admin.html.
+- The old 10-fast-logo-click admin trigger has been removed.
+- Admin dashboard is protected by Supabase Authentication plus the admin_users authorization check.
+- Admin and private support pages are noindex.
+- ads.txt populated with the provided publisher ID (pub-4492856202252855).
+- sitemap.xml populated with https://clutchzoneofficial.vercel.app public-page URLs.
+- robots.txt points to the live sitemap URL and blocks admin/private support pages from crawling.
+- Vercel security headers for basic browser hardening.
+- No service-role Supabase key is added to frontend code.
+
+IMPORTANT: NO WEBSITE CODE CAN GUARANTEE “ONE-CLICK” ADSENSE APPROVAL.
+Google reviews the entire site, including content, navigation, policy compliance, ownership and other factors.
+
+FINAL STEPS YOU MUST COMPLETE AFTER DEPLOYMENT
+1. Deploy the site on your final domain and use that exact domain in AdSense.
+2. Add the exact AdSense site/verification code Google gives you. Do not use a fake publisher ID.
+3. ads.txt is populated with the publisher ID you supplied. Verify it matches the Publisher ID shown in your AdSense account.
+4. robots.txt, sitemap.xml, and canonical URLs are set to https://clutchzoneofficial.vercel.app. If you change domains later, update these URLs.
+5. Deploy these files, confirm https://clutchzoneofficial.vercel.app/ads.txt and /sitemap.xml load publicly, then submit https://clutchzoneofficial.vercel.app/sitemap.xml in Google Search Console.
+6. Add canonical URLs using the final domain if/when you want explicit canonical tags.
+7. In AdSense Privacy & messaging, configure the appropriate consent solution for your traffic. Google requires a certified CMP integrated with IAB TCF for personalized ads in the EEA, UK and Switzerland.
+8. Make sure the Privacy Policy accurately reflects every analytics, advertising, cookie and third-party service actually enabled.
+9. Keep original, useful content and clear navigation. Do not rely on ads to make a thin site look complete.
+10. Never click your own ads, ask others to click them, or place ads where accidental clicks are encouraged.
+
+SECURITY NOTE
+- The Supabase publishable/anon key is expected to be visible in a browser app; it is safe only when database/storage RLS and policies are correctly configured.
+- Never put a Supabase service-role key, private API key, admin password or other server secret in HTML/JS.
+- /admin.html is an entry point, not the security boundary. The database/backend authorization must remain enabled.
